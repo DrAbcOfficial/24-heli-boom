@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.80.1/phaser.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./manbafly.css">
+</head>
+<body>
+    <div id="startPage">
+        <form>
+            <h1>曼巴飞行</h1>
+            <h2>
+                <input type="radio" id="option_ez" name="options" value="1" checked>
+                <label for="option_ez">简单</label><br>
+            </h2>
+            <h2>
+                <input type="radio" id="option_md" name="options" value="2">
+                <label for="option_md">中等</label><br>
+            </h2>
+            <h2>
+                <input type="radio" id="option_hd" name="options" value="3">
+                <label for="option_hd">困难</label><br>
+            </h2>
+        </form>
+        <br>
+        <button id="start"><h3>开始游戏</h3></button>
+    </div>
+    <div id="endPage">
+        <h1>游戏结束</h1>
+        <h3 id="endPage.difficulty">难度：{DIFFICULTY}</h3>
+        <h3 id="endPage.score">得分：{SCORE}</h3>
+        <h3 id="endPage.time">存活时间：{TIME}</h3>
+        <button id="refresh"><h3>再来一盘</h3></button>
+    </div>
+    
+    <script src="./manbafly.js"></script>
+    <audio id="musicda" src="https://music.163.com/song/media/outer/url?id=2152791580.mp3" preload loop></audio>
+</body>
+</html>

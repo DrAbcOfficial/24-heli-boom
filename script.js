@@ -20,7 +20,7 @@ let tracelaoda = (e)=>{
     nCon.style.top=e.pageY+"px";
     let nDiv=document.createElement('img');
     nDiv.className="moulaoda";
-    nDiv.src="./laoda.png";
+    nDiv.src="./img/laoda.png";
     nDiv.style="filter: drop-shadow(hsl("+(20*counter)+"deg,100%,70%,80%) 200px 0);";
     nCon.appendChild(nDiv);
     document.body.appendChild(nCon);
@@ -31,7 +31,7 @@ let tracelaoda = (e)=>{
     setTimeout(()=>{moveflag=false;},100);
 };
 document.addEventListener("touchmove",(e)=>{
-    e.preventDefault()
+    e[0].preventDefault()
     tracelaoda(e.touches[0]);
 })
 document.addEventListener("mousemove",(e)=>{
@@ -46,7 +46,11 @@ document.addEventListener("click",(e)=>{
     nDiv.style="filter:hue-rotate("+(20*counter)+"deg);"
     nDiv.style.left=e.pageX+"px";
     nDiv.className="falllaoda";
-    nDiv.src="laoda.png";
+    nDiv.src="img/laoda.png";
     document.body.appendChild(nDiv);
     setTimeout(()=>{nDiv.remove();}, 5000);
+
+    let man = new Audio('./audio/man.mp3');
+    man.volume = 0.5;
+    man.play();
 });

@@ -123,3 +123,13 @@ button
     animation: dropfall 5s ease-in; 
     z-index: 99;
 }
+.float
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.137);
+    width: 200px;
+    z-index: 999;
+    text-align: right;
+}
