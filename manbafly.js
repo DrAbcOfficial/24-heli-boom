@@ -68,7 +68,7 @@ class LaodaFly extends Phaser.Scene
         this.m_p100KHint = this.add.text(10, 10, '十万分！', { fontSize: '64px', fill: '#fff' });
         this.m_p100KHint.setAlpha(0);
 
-        this.m_pLaoda = this.physics.add.image(0,0,"laoda")
+        this.m_pLaoda = this.physics.add.image(window.innerWidth/2, window.innerHeight/2,"laoda")
         this.m_pLaoda.setScale(0.1,0.1);
         this.m_pHelicopter = this.add.text(0, 0, '🚁', { fontSize: '96px', fill: '#fff' });
         this.m_pHelicopter.setScale(-1, 1);
